@@ -11,5 +11,4 @@ print(s)
 t = "Hello the World"
 # myList = [ i for i in t ]
 
-print([ i for i in "Hello the World" if i.upper() != 'L' ])
-
+print([i for i in "Hello the World" if i.upper() != 'L'])

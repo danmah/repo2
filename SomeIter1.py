@@ -11,6 +11,7 @@ def Allo(n: int) -> int:
     nr = len(str("Ok" * n))
     return nr if n > 10 else -nr
 
+
 j = map(Allo, itemAllo)
 
 myList = copy.deepcopy(j)
@@ -50,6 +51,7 @@ def my_cycle(UneListe: T.List[int]) -> T.Generator[int, None, None]:  # Potentie
         for j in UneListe:
             yield j
     return
+
 
 maListe = [1, 3, 4, 6, 7, 9]
 

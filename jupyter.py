@@ -57,7 +57,6 @@ print("Approximation de 'e' : {:.3f}".format(exp))
 
 
 class Domino(object):
-    
     def __init__(self, val1, val2):
         self.extremite1 = val1
         self.extremite2 = val2
@@ -65,9 +64,9 @@ class Domino(object):
     def appariement(self, autre) -> bool:
         # '''
         # return self.extremite1 == autre_ex.extremite1 or self.extremite2 == autre_ex.extremite1 or \
-        #        self.extremite1 == autre_ex.extremite2 or self.extremite2 == autre_ex.extremite2 
+        #        self.extremite1 == autre_ex.extremite2 or self.extremite2 == autre_ex.extremite2
         # '''
-        "Retourne la marque du premier côté apparié trouvé, sinon None." 
+        "Retourne la marque du premier côté apparié trouvé, sinon None."
 
         for n in (self.extremite1, self.extremite2):
             if n in (autre.extremite1, autre.extremite2):
@@ -76,6 +75,7 @@ class Domino(object):
 
     def __str__(self):
         return f"Ex1={self.extremite1}, Ex2={self.extremite2}"
+
 
 '''
 Jeu = []
@@ -104,7 +104,7 @@ import string
 import struct
 import difflib
 
-"""
+
 s1 = "Le monde est beau en été sous le joug du président."
 s2 = "Le monde est sale en hiver sous le joug du président"
 
@@ -113,10 +113,10 @@ cmp = difflib.SequenceMatcher(None, s1, s2)
 
 print(f"ratio = {cmp.ratio()}")
 
-for b in cmp.get_matching_blocks() :
+for b in cmp.get_matching_blocks():
     print(b)
 
-for c in cmp.get_opcodes() :
+for c in cmp.get_opcodes():
     print(c)
 
 #     print(f"{b} et {b} matchent pour {b} éléments.")
@@ -127,22 +127,25 @@ c = 1
 print(dir(difflib))
 
 
-b = 10 
-d = {'allo'+str(a):b+a for a in range(10)}
+b = 10
+d = {'allo'+str(a): b+a for a in range(10)}
 
 print(type(d))
 
-def RamssesII() : 
+
+def RamssesII():
     pass
+
 
 f = list()
 
-s= lambda y : "allo" if y < 10 else "bonjour"
+
+def s(y): return "allo" if y < 10 else "bonjour"
+
 
 f.append(s)
 print(f[0](9))
 
-"""
 
 import sys
 import io
@@ -168,7 +171,7 @@ D_AccountList[dada2] = Ac2
 
 # D_AccountList["GIS-1234-O"].append(AccountVentilTuple)
 
-# D_AccountList.setdefault("GIS-1234-P", []).append(AccountVentilTuple) 
+# D_AccountList.setdefault("GIS-1234-P", []).append(AccountVentilTuple)
 # # ça fait une liste dont la clé est l'account
 
 print(f"D_AccountList={D_AccountList}.")
@@ -191,6 +194,7 @@ def Repartir(temps: float, taux: float, tventile: tuple) -> tuple:
     for i in range(tventile[0]):
         yield round(temps * taux * tventile[1][i][0], 6), tventile[1][i][1]
     return
+
 
 s = tuple(k for k in Repartir(heureTrav, tauxHoraire, AccountVentilTuple))
 print(s)
@@ -223,7 +227,6 @@ def RepartirLambdaYield(tventile: tuple):
 
 
 # f2 = RepartirLambdaYield(AccountVentilTuple)
-
 
 
 import itertools

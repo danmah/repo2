@@ -42,7 +42,8 @@ def translate_rna_to_amino_acids(rna):
 
 
 # Programme principal =========================================================
-with open("../chapitre_10/indata_exo10_adn.txt", encoding='utf8') as f:
+fn = "../PythonBooks/Apprendre_a_programmer_Python3_avec_Jupyter/chapitre_10/indata_exo10_adn.txt"
+with open(fn, encoding='utf8') as f:
     dna = f.read()
 
 rna = dna.replace('T', 'U')  # passage ADN => ARN

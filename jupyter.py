@@ -1,7 +1,17 @@
 import random
 
+import sys
+import io
+
+import string
+import struct
+import difflib
+
+import itertools
+
+
 '''
-# Écrire un script qui calcule les 50 premiers termes de la table de multiplication par 13, 
+# Écrire un script qui calcule les 50 premiers termes de la table de multiplication par 13,
 # mais n'affiche que les termes qui sont multiples de 7
 
 d =  [n for n in [i*13 for i in range(1,51)] if n%7 == 0]
@@ -12,12 +22,12 @@ d =  [n for n in [i*13 for i in range(1,51)] if n%7 == 0]
 def kaprekar(lnum : list, nn : int = 4) -> list :
     if lnum.count(lnum[0]) == nn : # Get out if all numbers are the same!
         return 0
-    
+
     i = 10**(nn+1)
     cible = 6174 if nn==4 else 495 # nn must be 4 or 3
     myFormat = "%04d" if nn==4 else "%03d"
-    mylist = lnum 
-    nTry = 0 
+    mylist = lnum
+    nTry = 0
     while i != cible and nTry < 50 :
         PG = sorted(mylist, reverse=True)
         PP = PG[::-1]
@@ -100,11 +110,6 @@ for i in range(len(Joueur1)) :
 
 '''
 
-import string
-import struct
-import difflib
-
-
 s1 = "Le monde est beau en été sous le joug du président."
 s2 = "Le monde est sale en hiver sous le joug du président"
 
@@ -128,7 +133,7 @@ print(dir(difflib))
 
 
 b = 10
-d = {'allo'+str(a): b+a for a in range(10)}
+d = {'allo' + str(a): b + a for a in range(10)}
 
 print(type(d))
 
@@ -140,16 +145,12 @@ def RamssesII():
 f = list()
 
 
-def s(y): return "allo" if y < 10 else "bonjour"
+def s(y):
+    return "allo" if y < 10 else "bonjour"
 
 
 f.append(s)
 print(f[0](9))
-
-
-import sys
-import io
-
 
 heureTrav = random.randint(1, 70)
 tauxHoraire = random.randint(1, 60) + 100
@@ -179,7 +180,7 @@ print(f"D_AccountList={D_AccountList}.")
 print(f"Heures Travaillées : {heureTrav}, Taux: {tauxHoraire}, Ventilation:{AccountVentilTuple}")
 
 '''
-first = True 
+first = True
 prefix = ""
 with open("ventile.txt", "w") as fout :
     for i in Repartir(heureTrav, tauxHoraire, AccountVentilTuple) :
@@ -227,9 +228,6 @@ def RepartirLambdaYield(tventile: tuple):
 
 
 # f2 = RepartirLambdaYield(AccountVentilTuple)
-
-
-import itertools
 
 lst = [(1, 'A'), (1, 'B'), (2, 'C')]
 dct = dict((key, tuple(v for (k, v) in pairs))
